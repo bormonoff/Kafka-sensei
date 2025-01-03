@@ -23,7 +23,7 @@ For a better understanding of the data sources, I've wrote a top-level architect
 ## Launch
 1. Lauch kafka broker and create topics using:
 ```
-- docker compose -f docker_compose.yml 
+- docker compose -f docker_compose.yml up -d
 ```
 2. Prepare the .env file. One file is used by all services:
 ```
