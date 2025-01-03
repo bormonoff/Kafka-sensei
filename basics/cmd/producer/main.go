@@ -7,8 +7,8 @@ import (
 	"github.com/confluentinc/confluent-kafka-go/kafka"
 	"github.com/rs/zerolog/log"
 
-	"producer/internal/config"
-	"producer/internal/model"
+	producerconfig "kafka/internal/config/producer"
+	"kafka/internal/model"
 )
 
 func main() {
@@ -18,7 +18,7 @@ func main() {
 }
 
 func run() error {
-	cfg, err := config.ParseFromEnv()
+	cfg, err := producerconfig.ParseFromEnv()
 	if err != nil {
 		return fmt.Errorf("parse config: %w", err)
 	}

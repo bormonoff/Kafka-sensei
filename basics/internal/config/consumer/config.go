@@ -1,4 +1,4 @@
-package config
+package consumer
 
 import (
 	"flag"

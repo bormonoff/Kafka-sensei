@@ -9,6 +9,12 @@ The producer is configured using env variables. See example configurations in th
 
 
 Launch steps:
+1. Lauch kafka broker using:
+```
+- docker compose -f docker_compose.yml up -d
+```
+### Producer
+2. Launch the producer using:
  ```
  - make prep-producer-conf
  - make run-producer
@@ -19,7 +25,7 @@ The consumer takes cli arguments for configuration. To explore available argumen
   ```
  - make consumer-help
  ```
-Launch steps for consumers with different settings:
+2. Launch the cosumers using:
  ```
  - make run-consumer-1 
  - make run-consumer-2

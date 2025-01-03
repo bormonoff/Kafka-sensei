@@ -10,8 +10,8 @@ import (
 	"github.com/confluentinc/confluent-kafka-go/kafka"
 	"github.com/rs/zerolog/log"
 
-	"consumer/internal/config"
-	"consumer/internal/model"
+	consumerconfig "kafka/internal/config/consumer"
+	"kafka/internal/model"
 )
 
 func main() {
@@ -21,7 +21,7 @@ func main() {
 }
 
 func run() error {
-	cfg := config.ParseArgs()
+	cfg := consumerconfig.ParseArgs()
 
 	done := make(chan os.Signal, 1)
 	signal.Notify(done, syscall.SIGINT, syscall.SIGTERM)
